@@ -16,10 +16,15 @@ export default function Student() {
     api.get("/students").then(res => setStudents(res.data));
   }, []);
 
+  const loadStudents = () => {
+    api.get("/students").then(res => setStudents(res.data));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     api.post("/students", student).then(() => {
       alert("Student Added");
+      loadStudents();
     });
   };
 

@@ -9,6 +9,7 @@ import EligibilityCriteria from "./components/EligibilityCriteria";
 import AcademicPerformance from "./components/AcademicPerformance";
 import Selection from "./components/Selection";
 import EligibilityCheck from "./components/EligibilityCheck";
+import DatabaseStatus from "./components/DatabaseStatus";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Link to="/academic-performance">Academic Performance</Link>
           <Link to="/selections">Selections</Link>
           <Link to="/eligibility-check">Eligibility Check</Link>
+          <Link to="/db-status">DB Status</Link>
         </nav>
 
         <main className="app-main">
@@ -47,6 +49,7 @@ function App() {
             <Route path="/academic-performance" element={<AcademicPerformance />} />
             <Route path="/selections" element={<Selection />} />
             <Route path="/eligibility-check" element={<EligibilityCheck />} />
+            <Route path="/db-status" element={<DatabaseStatus />} />
           </Routes>
         </main>
       </div>
